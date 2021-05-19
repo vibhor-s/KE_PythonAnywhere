@@ -44,6 +44,7 @@
                         style="background-color:rgb(54, 53, 53); font-size: 25px; padding-top: 20px; padding-bottom: 20px;">
                         Close &#x2715;</a>
                     <br>
+
                     <div class="sidemenu_allproducts">
                         <a href="#" onclick="close_product_submenu()">Products<i class="fa fa-plus-square"
                                 style="padding:0; width:2em"></i></a>
@@ -256,6 +257,10 @@
             <p> All Rights Reserved | POWERED BY Developers Vibhor and Vaibhav </p>
         </div>
     </div>
+
+    {% for i in category_list %}
+    <a href="/viewall/{{i}}" style="font-size: 20px;"> {{i}} </a> <br><br>
+    {% endfor %}
 
     <script src=" {%static 'shop/javascript/myscript.js'%} "></script>
 

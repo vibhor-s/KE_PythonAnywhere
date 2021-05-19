@@ -1,0 +1,22 @@
+{% extends 'shop/basic.html' %}
+{% load static %}
+{% block title %} Krishna Electronics {{product_cat}} {% endblock %}
+{% block body %}
+
+<!--product_cat-->
+<!--temp-->
+
+<p style="font-size: 40px"> {{temp}} </p>
+
+
+{% for i in product_cat %}
+<p style="font-size: 20px"> {{i.product_name}} </p>
+{% endfor %}
+
+
+
+
+
+
+{% endblock %}
+

@@ -511,9 +511,9 @@ product modal here
     text-align: center;
     background-color: #fefefe;
     padding-bottom: 20px;
-    margin: 5% auto;
+    margin: 2% auto;
     width: 90%;
-    height: 80%;
+    height: 90%;
 }
 
 .product_modal_content_info
@@ -552,6 +552,12 @@ product modal here
     gap: 20px;
     overflow: auto;
 }
+.product_modal_content_images img
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 
 /*
 product modal here
