@@ -1,0 +1,30 @@
+{% extends 'shop/basic.html' %}
+{% load static %}
+{% block title %} Krishna Electronics {{product.name}} {% endblock %}
+{% block body %}
+
+
+<div class="product_modal" xmlns="http://www.w3.org/1999/html">
+    <div class = "product_modal_content">
+        <div class = "product_modal_content_info">
+
+            <a href="javascript:history.go(-1);" class="product_modal_close"> &#10006; CLOSE </a>
+            <p>{{product.product_name}}</p>
+        </div>
+        <div class = "product_modal_content_images">
+            <img src="/media/{{product.display_image}}">
+            <img src="/media/{{product.display_image}}">
+            <img src="/media/{{product.display_image}}">
+            <img src="/media/{{product.display_image}}">
+            <img src="/media/{{product.display_image}}">
+            <img src="/media/{{product.display_image}}">
+            <img src="/media/{{product.display_image}}">
+            <img src="/media/{{product.display_image}}">
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

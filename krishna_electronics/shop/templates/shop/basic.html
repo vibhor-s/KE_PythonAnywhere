@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href=" {%static 'shop/css/style1_pc.css' %} ">
+    <link rel="stylesheet" media="screen and (max-width: 1050px)" href=" {%static 'shop/css/style2_phone.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=PT+Serif:ital@1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>{% block title %}  {% endblock %} </title>
+
+</head>
+
+<body>
+    <div class="top_row">
+        <div class="scroll-left">
+            <p id="welcome">Welcome to Krishna Electronics</p>
+        </div>
+        <div class="top_right_buttons">
+
+            <div id="sidemenu">
+                <div class="side_nav" id="mySideNav">
+                    <!-- this is the side menu -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                        style="background-color:rgb(54, 53, 53); font-size: 25px; padding-top: 20px; padding-bottom: 20px;">
+                        Close &#x2715;</a>
+                    <br>
+                    <div class="sidemenu_allproducts">
+                        <a href="#" onclick="close_product_submenu()">Products<i class="fa fa-plus-square"
+                                style="padding:0; width:2em"></i></a>
+                        <div id="sidemenu_product_submenu">
+
+                            <a href="#">Air Conditioners</a>
+                            <a href="#">Air Purifiers</a>
+                            <a href="#">Automatic Sanitizer Dispenser</a>
+                            <a href="#">Batteries</a>
+                            <a href="#">Chimneys</a>
+                            <a href="#">Coffee Makers</a>
+                            <a href="#">Cook Tops</a>
+                            <a href="#">Coolers</a>
+                            <a href="#">Deep Freezers</a>
+                            <a href="#">Electric Kettle</a>
+                            <a href="#">Fans</a>
+                            <a href="#">Hair Dryers</a>
+                            <a href="#">Hand Blenders</a>
+                            <a href="#">Home Theaters</a>
+                            <a href="#">Induction</a>
+                            <a href="#">Inverters</a>
+                            <a href="#">Irons</a>
+                            <a href="#">Juicer, Mixer & Grinders</a>
+                            <a href="#">Microwave</a>
+                            <a href="#">Milk Madhani</a>
+                            <a href="#">Refrigerators</a>
+                            <a href="#">Room Heaters</a>
+                            <a href="#">Roti Maker</a>
+                            <a href="#">Stabilizers (A.C & Main Line)</a>
+                            <a href="#">Sewing Machines</a>
+                            <a href="#">Televisions</a>
+                            <a href="#">Toasters</a>
+                            <a href="#">Trimmers</a>
+                            <a href="#">Vacuum Cleaners</a>
+                            <a href="#">Washing Machines</a>
+                            <a href="#">Water Coolers</a>
+                            <a href="#">Water Heaters</a>
+                        </div>
+                    </div>
+                    <a href="#">About Us</a>
+                    <a  href="#contact_link" onclick="closeNav()">Contact Us</a>
+                    <br><br><hr><br><br>
+                    <p style='font-family: "Nunito",sans-serif; font-size: 12px; text-align: left; margin-left: 15px;'>
+                        FOLLOW US ON</p>
+                    <div class="social_media_side_container">
+                        <a href="" class="social_media_sidemenu social_media_sidemenu_fb"></a>
+                        <a href="" class="social_media_sidemenu social_media_sidemenu_google"></a>
+                        <a href="" class="social_media_sidemenu social_media_sidemenu_insta"></a>
+                    </div>
+                    <br><br>
+                    <p
+                        style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 12px; text-align: left; margin-left: 15px;'>
+                        © Copyright 2021 Krishna Electronics <br> All rights reserved</p>
+                </div>
+            </div>
+
+            <a href="#" onclick="openNav()">
+                <div id="hamburger_icon">
+                    <i class="material-icons" style="font-size:20px">menu</i>
+                </div>
+            </a>
+            <!-- exp here -->
+            <a href="/">
+                <div id="home_page">
+                    Home
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Krishna+electronics/@29.1425202,77.6107154,15z/data=!4m5!3m4!1s0x0:0xdefaa7c8927c872e!8m2!3d29.14255!4d77.6107359"
+                target="_blank">
+                <div id="location">
+                    <i class="material-icons" style="font-size:15px">place</i>
+                    Location
+                </div>
+            </a>
+            <a href="#contact_link">
+                <div id="contact_us">
+                    Contact Us
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="heading_name">
+        <h1>Krishna Electronics</h1>
+        <h3>Transforming Shopping into Experience</h3>
+        <h3>Hari Enclave, Meerut Road, Sardana 203001</h3>
+    </div>
+
+    <div class="navbar">
+
+        <!-- dropdown menu for all products button -->
+
+        <div class="dropdown">
+            <div class="dropbtn">
+                All Products <i class="arrow down"> </i>
+            </div>
+            <!-- <br> <br> <br> -->
+            <div class="dropdown-content">
+                <a href="#">Air Conditioners</a>
+                <a href="#">Air Purifiers</a>
+                <a href="#">Automatic Sanitizer Dispenser</a>
+                <a href="#">Batteries</a>
+                <a href="#">Chimneys</a>
+                <a href="#">Coffee Makers</a>
+                <a href="#">Cook Tops</a>
+                <a href="#">Coolers</a>
+                <a href="#">Deep Freezers</a>
+                <a href="#">Electric Kettle</a>
+                <a href="#">Fans</a>
+                <a href="#">Hair Dryers</a>
+                <a href="#">Hand Blenders</a>
+                <a href="#">Home Theaters</a>
+                <a href="#">Induction</a>
+                <a href="#">Inverters</a>
+                <a href="#">Irons</a>
+                <a href="#">Juicer, Mixer & Grinders</a>
+                <a href="#">Microwave</a>
+                <a href="#">Milk Madhani</a>
+                <a href="#">Refrigerators</a>
+                <a href="#">Room Heaters</a>
+                <a href="#">Roti Maker</a>
+                <a href="#">Stabilizers (A.C & Main Line)</a>
+                <a href="#">Sewing Machines</a>
+                <a href="#">Televisions</a>
+                <a href="#">Toasters</a>
+                <a href="#">Trimmers</a>
+                <a href="#">Vacuum Cleaners</a>
+                <a href="#">Washing Machines</a>
+                <a href="#">Water Coolers</a>
+                <a href="#">Water Heaters</a>
+
+            </div>
+        </div>
+        <!-- dropdown menu for all products button -->
+
+        <div class="scrollmenu">
+            <a href="#">Air Conditioners</a>
+            <a href="#">Televisions</a>
+            <a href="#">Washing Machines</a>
+            <a href="#">Refrigerators</a>
+            <a href="#">Coolers</a>
+            <a href="#">Air Purifiers</a>
+            <a href="#">Automatic Sanitizer Dispenser</a>
+            <a href="#">Batteries</a>
+            <a href="#">Chimneys</a>
+            <a href="#">Coffee Makers</a>
+            <a href="#">Cook Tops</a>
+            <a href="#">Deep Freezers</a>
+            <a href="#">Electric Kettle</a>
+            <a href="#">Fans</a>
+            <a href="#">Hair Dryers</a>
+            <a href="#">Hand Blenders</a>
+            <a href="#">Home Theaters</a>
+            <a href="#">Induction</a>
+            <a href="#">Inverters</a>
+            <a href="#">Irons</a>
+            <a href="#">Juicer, Mixer & Grinders</a>
+            <a href="#">Microwave</a>
+            <a href="#">Milk Madhani</a>
+            <a href="#">Room Heaters</a>
+            <a href="#">Roti Maker</a>
+            <a href="#">Stabilizers (A.C & Main Line)</a>
+            <a href="#">Sewing Machines</a>
+            <a href="#">Toasters</a>
+            <a href="#">Trimmers</a>
+            <a href="#">Vacuum Cleaners</a>
+            <a href="#">Water Coolers</a>
+            <a href="#">Water Heaters</a>
+
+
+
+        </div>
+    </div>
+
+
+{% block body %}        {% endblock %}
+
+    <div class="contact-form" id="contact_link">
+        <h1>Contact Us</h1>
+        <h3>For all enquiries, kindly fill the form below</h3>
+        <form action="#">
+            <div class="contact-fields">
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="contact-fields">
+                <input type="text" name="phone" placeholder="Phone Number">
+            </div>
+            <div class="contact-fields">
+                <input type="email" name="email" placeholder="Email">
+            </div>
+
+            <div class="contact-fields">
+                <textarea id="message-box" name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            </div>
+            <div class="contact-fields">
+                <button id="contact-form-submit-button1">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="bottom-row">
+        <div class="social-media">
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.google.com/intl/en_in/business/" class="fa fa-google" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+        </div>
+        <div class="dev-info">
+            <h2>© 2021 Krishna Electronics</h2>
+            <p> All Rights Reserved | POWERED BY Developers Vibhor and Vaibhav </p>
+        </div>
+    </div>
+
+    <script src=" {%static 'shop/javascript/myscript.js'%} "></script>
+
+</body>
+
+</html>

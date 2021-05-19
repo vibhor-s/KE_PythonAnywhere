@@ -1,0 +1,136 @@
+{% extends 'shop/basic.html' %}
+{% load static %}
+{% block title %} Krishna Electronics {% endblock %}
+{% block body %}
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/1.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/2.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/3.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/4.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/5.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/6.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/7.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/8.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/9.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/10.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/11.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/12.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img class="img_slides" src="../static/shop/images/shop_pics/13.jpg">
+        </div>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+
+
+    <div class="products">
+
+
+
+
+        <!-- Air Conditioners -->
+        <div class="category_viewall">
+            <h2>Air Conditioners</h2>
+            <a href="#" class="viewall">VIEW ALL</a>
+        </div>
+
+        <div class="scroll2">
+            {% for i in allprods %}
+            {% if i.product_category == 'AC' %}
+            <a href="/products/{{i.product_id}}">-->
+                <div class="container">
+                    <div class = "container_image">
+                        <img src="/media/{{i.display_image}}" alt="">
+                    </div>
+                    <br>
+                    <p class="description"> {{ i.product_name }} </p>
+
+                </div>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+
+        <!-- LED TV -->
+        <div class="category_viewall">
+            <h2>LED TV</h2>
+            <a href="#" class="viewall">VIEW ALL</a>
+        </div>
+
+        <div class="scroll2">
+            {% for i in allprods %}
+            {% if i.product_category == 'LED TV' %}
+            <a href="/products/{{i.product_id}}">-->
+                <div class="container">
+                    <div class = "container_image">
+                        <img src="/media/{{i.display_image}}" alt="">
+                    </div>
+                    <br>
+                    <p class="description"> {{ i.product_name }} </p>
+
+                </div>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock %}
+
+
+
