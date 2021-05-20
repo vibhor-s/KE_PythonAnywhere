@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Product, Contact
 from itertools import chain
+from django.core.mail import send_mail
+
+
 
 # Create your views here.
 def index(request):
@@ -37,7 +40,6 @@ def viewall(request, my_category):
 
 def contact(request):
     if request.method=="POST":
-        print(request)
         name = request.POST.get('name', '')
         phone = request.POST.get('phone', '')
         email = request.POST.get('email', '')
@@ -45,11 +47,22 @@ def contact(request):
         contact = Contact(name=name, phone=phone, email=email, message=message)
         contact.save()
 
+        data = {
+            'name' : name,
+            'phone' : phone,
+            'email' : email,
+            'message' : message
+        }
+        message = '''
+        Name : {}
+        Phone : {}
+        Email : {}
+        Message : {}
+        '''.format(data['name'], data['phone'], data['email'], data['message'])
+        send_mail('Contact us website message', message, '', ['krishnaelectronicsweb@gmail.com'])
+
+        print(data)
     return render(request, 'shop/home.html')
-
-
-
-
 
 
 

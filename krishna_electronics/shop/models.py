@@ -8,7 +8,7 @@ class Product(models.Model):
     display_image = models.ImageField(upload_to="shop/images", default="")
 
     def __str__(self):
-        return (self.product_category, self.product_name)
+        return (self.product_category + " " + self.product_name)
 
 class Contact(models.Model):
     msg_id = models.AutoField(primary_key = True)
@@ -18,7 +18,7 @@ class Contact(models.Model):
     message = models.CharField(max_length=5000)
 
     def __str__(self):
-        return (self.name, self.message)
+        return (self.name + " " + self.message)
 
 
 
