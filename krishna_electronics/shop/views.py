@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Product
+from .models import Product, Contact
 from itertools import chain
 
 # Create your views here.
@@ -35,7 +35,17 @@ def viewall(request, my_category):
     return render(request, 'shop/viewall.html', params)
 
 
+def contact(request):
+    if request.method=="POST":
+        print(request)
+        name = request.POST.get('name', '')
+        phone = request.POST.get('phone', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+        contact = Contact(name=name, phone=phone, email=email, message=message)
+        contact.save()
 
+    return render(request, 'shop/home.html')
 
 
 
