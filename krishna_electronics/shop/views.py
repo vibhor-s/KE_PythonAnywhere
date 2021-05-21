@@ -8,10 +8,8 @@ from django.core.mail import send_mail
 
 # Create your views here.
 def index(request):
+
     all_products = Product.objects.all();
-    # ac = Product.objects.filter(product_category='Air Conditioners')
-    # ledtv = Product.objects.filter(product_category='LED TV')
-    # allprods = list(chain(ac, ledtv))
     category_list = []
     for i in all_products:
         if(i.product_category not in category_list):
@@ -29,12 +27,26 @@ def product_view (request, my_id):
     return render(request, 'shop/product_view.html', {'product':product[0]})
 
 def about(request):
-    return render(request, 'shop/about.html')
+    all_products = Product.objects.all();
+    category_list = []
+    for i in all_products:
+        if (i.product_category not in category_list):
+            category_list.append(i.product_category)
+    category_list = sorted(category_list)
+    params = {'allprods': all_products, 'category_list': category_list}
+
+    return render(request, 'shop/about.html', params)
 
 def viewall(request, my_category):
+    all_products = Product.objects.all();
+    category_list = []
+    for i in all_products:
+        if (i.product_category not in category_list):
+            category_list.append(i.product_category)
+    category_list = sorted(category_list)
     temp = my_category
     product_cat = Product.objects.filter(product_category = my_category)
-    params = {'product_cat' : product_cat, 'temp':temp}
+    params = {'product_cat' : product_cat, 'temp':temp, 'allprods': all_products, 'category_list': category_list}
     return render(request, 'shop/viewall.html', params)
 
 
