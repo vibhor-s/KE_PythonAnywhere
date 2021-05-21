@@ -554,8 +554,8 @@ product modal here
 }
 .product_modal_content_images img
 {
-    width: 50vh;
-    height: auto;
+    width: auto;
+    height: 50vh;
     margin: 20px;
 }
 
@@ -568,8 +568,8 @@ product modal here
 
 .viewall_page_product_category
 {
-    margin-left: 50px;
-    font-size: 18px;
+    margin-left: 100px;
+    font-size: 30px;
 }
 
 
