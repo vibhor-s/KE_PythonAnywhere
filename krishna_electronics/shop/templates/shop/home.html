@@ -79,7 +79,7 @@
 
         <div class="scroll2">
             {% for i in allprods %}
-            {% if i.product_category == 'AC' %}
+            {% if i.product_category == "Air Conditioners" and  i.display_image  %}
             <a href="/products/{{i.product_id}}">-->
                 <div class="container">
                     <div class = "container_image">
@@ -102,12 +102,13 @@
         </div>
 
         <div class="scroll2">
+
             {% for i in allprods %}
-            {% if i.product_category == 'LED TV' %}
+            {% if i.product_category == 'LED TV'  and  i.display_image %}
             <a href="/products/{{i.product_id}}">-->
                 <div class="container">
                     <div class = "container_image">
-                        <img src="/media/{{i.display_image}}" alt="">
+                            <img src="/media/{{i.display_image}}" alt="">
                     </div>
                     <br>
                     <p class="description"> {{ i.product_name }} </p>

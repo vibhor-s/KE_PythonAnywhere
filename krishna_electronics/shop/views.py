@@ -9,7 +9,7 @@ from django.core.mail import send_mail
 # Create your views here.
 def index(request):
     all_products = Product.objects.all();
-    ac = Product.objects.filter(product_category='AC')
+    ac = Product.objects.filter(product_category='Air Conditioners')
     ledtv = Product.objects.filter(product_category='LED TV')
     allprods = list(chain(ac, ledtv))
     category_list = []
