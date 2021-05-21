@@ -49,39 +49,10 @@
                         <a href="#" onclick="close_product_submenu()">Products<i class="fa fa-plus-square"
                                 style="padding:0; width:2em"></i></a>
                         <div id="sidemenu_product_submenu">
+                            {% for i in category_list %}
+                                <a href="/viewall/{{i}}"> {{i}} </a>
+                            {% endfor %}
 
-                            <a href="#">Air Conditioners</a>
-                            <a href="#">Air Purifiers</a>
-                            <a href="#">Automatic Sanitizer Dispenser</a>
-                            <a href="#">Batteries</a>
-                            <a href="#">Chimneys</a>
-                            <a href="#">Coffee Makers</a>
-                            <a href="#">Cook Tops</a>
-                            <a href="#">Coolers</a>
-                            <a href="#">Deep Freezers</a>
-                            <a href="#">Electric Kettle</a>
-                            <a href="#">Fans</a>
-                            <a href="#">Hair Dryers</a>
-                            <a href="#">Hand Blenders</a>
-                            <a href="#">Home Theaters</a>
-                            <a href="#">Induction</a>
-                            <a href="#">Inverters</a>
-                            <a href="#">Irons</a>
-                            <a href="#">Juicer, Mixer & Grinders</a>
-                            <a href="#">Microwave</a>
-                            <a href="#">Milk Madhani</a>
-                            <a href="#">Refrigerators</a>
-                            <a href="#">Room Heaters</a>
-                            <a href="#">Roti Maker</a>
-                            <a href="#">Stabilizers (A.C & Main Line)</a>
-                            <a href="#">Sewing Machines</a>
-                            <a href="#">Televisions</a>
-                            <a href="#">Toasters</a>
-                            <a href="#">Trimmers</a>
-                            <a href="#">Vacuum Cleaners</a>
-                            <a href="#">Washing Machines</a>
-                            <a href="#">Water Coolers</a>
-                            <a href="#">Water Heaters</a>
                         </div>
                     </div>
                     <a href="#">About Us</a>
@@ -143,77 +114,18 @@
             </div>
             <!-- <br> <br> <br> -->
             <div class="dropdown-content">
-                <a href="#">Air Conditioners</a>
-                <a href="#">Air Purifiers</a>
-                <a href="#">Automatic Sanitizer Dispenser</a>
-                <a href="#">Batteries</a>
-                <a href="#">Chimneys</a>
-                <a href="#">Coffee Makers</a>
-                <a href="#">Cook Tops</a>
-                <a href="#">Coolers</a>
-                <a href="#">Deep Freezers</a>
-                <a href="#">Electric Kettle</a>
-                <a href="#">Fans</a>
-                <a href="#">Hair Dryers</a>
-                <a href="#">Hand Blenders</a>
-                <a href="#">Home Theaters</a>
-                <a href="#">Induction</a>
-                <a href="#">Inverters</a>
-                <a href="#">Irons</a>
-                <a href="#">Juicer, Mixer & Grinders</a>
-                <a href="#">Microwave</a>
-                <a href="#">Milk Madhani</a>
-                <a href="#">Refrigerators</a>
-                <a href="#">Room Heaters</a>
-                <a href="#">Roti Maker</a>
-                <a href="#">Stabilizers (A.C & Main Line)</a>
-                <a href="#">Sewing Machines</a>
-                <a href="#">Televisions</a>
-                <a href="#">Toasters</a>
-                <a href="#">Trimmers</a>
-                <a href="#">Vacuum Cleaners</a>
-                <a href="#">Washing Machines</a>
-                <a href="#">Water Coolers</a>
-                <a href="#">Water Heaters</a>
+                {% for i in category_list %}
+                    <a href="/viewall/{{i}}"> {{i}} </a>
+                {% endfor %}
 
             </div>
         </div>
         <!-- dropdown menu for all products button -->
 
         <div class="scrollmenu">
-            <a href="#">Air Conditioners</a>
-            <a href="#">Televisions</a>
-            <a href="#">Washing Machines</a>
-            <a href="#">Refrigerators</a>
-            <a href="#">Coolers</a>
-            <a href="#">Air Purifiers</a>
-            <a href="#">Automatic Sanitizer Dispenser</a>
-            <a href="#">Batteries</a>
-            <a href="#">Chimneys</a>
-            <a href="#">Coffee Makers</a>
-            <a href="#">Cook Tops</a>
-            <a href="#">Deep Freezers</a>
-            <a href="#">Electric Kettle</a>
-            <a href="#">Fans</a>
-            <a href="#">Hair Dryers</a>
-            <a href="#">Hand Blenders</a>
-            <a href="#">Home Theaters</a>
-            <a href="#">Induction</a>
-            <a href="#">Inverters</a>
-            <a href="#">Irons</a>
-            <a href="#">Juicer, Mixer & Grinders</a>
-            <a href="#">Microwave</a>
-            <a href="#">Milk Madhani</a>
-            <a href="#">Room Heaters</a>
-            <a href="#">Roti Maker</a>
-            <a href="#">Stabilizers (A.C & Main Line)</a>
-            <a href="#">Sewing Machines</a>
-            <a href="#">Toasters</a>
-            <a href="#">Trimmers</a>
-            <a href="#">Vacuum Cleaners</a>
-            <a href="#">Water Coolers</a>
-            <a href="#">Water Heaters</a>
-
+            {% for i in category_list %}
+                <a href="/viewall/{{i}}"> {{i}} </a>
+            {% endfor %}
         </div>
     </div>
 

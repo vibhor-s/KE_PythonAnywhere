@@ -68,65 +68,33 @@
 
 
 
+<!--allprods-->
+<!--category_list-->
 
     <div class="products">
-
-        <!-- Air Conditioners -->
-        <div class="category_viewall">
-            <h2>Air Conditioners</h2>
-            <a href="#" class="viewall">VIEW ALL</a>
-        </div>
-
-        <div class="scroll2">
-            {% for i in allprods %}
-            {% if i.product_category == "Air Conditioners" and  i.display_image  %}
-            <a href="/products/{{i.product_id}}">-->
-                <div class="container">
-                    <div class = "container_image">
-                        <img src="/media/{{i.display_image}}" alt="">
-                    </div>
-                    <br>
-                    <p class="description"> {{ i.product_name }} </p>
-
-                </div>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-
-
-        <!-- LED TV -->
-        <div class="category_viewall">
-            <h2>LED TV</h2>
-            <a href="#" class="viewall">VIEW ALL</a>
-        </div>
-
-        <div class="scroll2">
-
-            {% for i in allprods %}
-            {% if i.product_category == 'LED TV'  and  i.display_image %}
-            <a href="/products/{{i.product_id}}">-->
-                <div class="container">
-                    <div class = "container_image">
+        {% for cat in category_list %}
+            <div class="category_viewall">
+                <h2>{{cat}}</h2>
+                <a href="#" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == cat and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
                             <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
                     </div>
-                    <br>
-                    <p class="description"> {{ i.product_name }} </p>
-
-                </div>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-
-
-
-
-
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
     </div>
-
-
-
 
 
 {% endblock %}
