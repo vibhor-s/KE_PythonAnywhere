@@ -554,8 +554,9 @@ product modal here
 }
 .product_modal_content_images img
 {
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 50vh;
+    height: auto;
+    margin: 20px;
 }
 
 
@@ -565,48 +566,22 @@ product modal here
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#viewall_back
+.viewall_page_product_category
 {
-    text-align : center;
-    background-color: rgb(71, 73, 73);
+    margin-left: 50px;
+    font-size: 18px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.viewall_page_boxes
+{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin:50px;
+    flex-wrap : wrap;
+    gap: 50px;
+}
 
 
 

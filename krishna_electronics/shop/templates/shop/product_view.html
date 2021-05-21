@@ -14,14 +14,36 @@
             <p>{{product.product_name}}</p>
         </div>
         <div class = "product_modal_content_images">
-            <img src="/media/{{product.display_image}}">
-            <img src="/media/{{product.display_image}}">
-            <img src="/media/{{product.display_image}}">
-            <img src="/media/{{product.display_image}}">
-            <img src="/media/{{product.display_image}}">
-            <img src="/media/{{product.display_image}}">
-            <img src="/media/{{product.display_image}}">
-            <img src="/media/{{product.display_image}}">
+            {% if product.display_image %}
+                <img src="/media/{{product.display_image}}">
+            {% endif %}
+            {% if product.prod_img1 %}
+                <img src="/media/{{product.prod_img1}}">
+            {% endif %}
+            {% if product.prod_img2 %}
+                <img src="/media/{{product.prod_img2}}">
+            {% endif %}
+            {% if product.prod_img3 %}
+                <img src="/media/{{product.prod_img3}}">
+            {% endif %}
+            {% if product.prod_img4 %}
+                <img src="/media/{{product.prod_img4}}">
+            {% endif %}
+            {% if product.prod_img5 %}
+                <img src="/media/{{product.prod_img5}}">
+            {% endif %}
+            {% if product.prod_img6 %}
+                <img src="/media/{{product.prod_img6}}">
+            {% endif %}
+            {% if product.prod_img7 %}
+                <img src="/media/{{product.prod_img7}}">
+            {% endif %}
+            {% if product.prod_img8 %}
+                <img src="/media/{{product.prod_img8}}">
+            {% endif %}
+
+
+
         </div>
     </div>
 </div>

@@ -7,14 +7,42 @@
 <!--temp-->
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<a href="javascript:history.go(-1);" class="product_modal_close" id="viewall_back">  &#129068 Back</a>
 
-<p style="font-size: 40px"> {{temp}} </p>
 
+<p class="viewall_page_product_category">
+    <a href="javascript:history.go(-1);"  id="viewall_page_back"> Back</a>
+    &#10095; {{temp}}
+</p>
+
+<div class="viewall_page_boxes" >
 
 {% for i in product_cat %}
-<p style="font-size: 20px"> {{i.product_name}} </p>
+    <a href="/products/{{i.product_id}}" style=" text-decoration:none; color: rgb(32, 31, 31);">-->
+        <div class="container" >
+            <div class = "container_image">
+                <img src="/media/{{i.display_image}}" alt="">
+            </div>
+            <br>
+            <p class="description"> {{ i.product_name }} </p>
+        </div>
+    </a>
+
 {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
