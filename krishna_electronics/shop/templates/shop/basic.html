@@ -40,13 +40,13 @@
             <div id="sidemenu">
                 <div class="side_nav" id="mySideNav">
                     <!-- this is the side menu -->
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                    <a class="closebtn" onclick="closeNav()"
                         style="background-color:rgb(54, 53, 53); font-size: 25px; padding-top: 20px; padding-bottom: 20px;">
                         Close &#x2715;</a>
                     <br>
 
                     <div class="sidemenu_allproducts">
-                        <a href="#" onclick="close_product_submenu()">Products<i class="fa fa-plus-square"
+                        <a onclick="close_product_submenu()">Products<i class="fa fa-plus-square"
                                 style="padding:0; width:2em"></i></a>
                         <div id="sidemenu_product_submenu">
                             {% for i in category_list %}
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <a href="#" onclick="openNav()">
+            <a onclick="openNav()">
                 <div id="hamburger_icon">
                     <i class="material-icons" style="font-size:20px">menu</i>
                 </div>
