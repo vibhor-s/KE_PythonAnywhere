@@ -11,3 +11,12 @@ urlpatterns = [
     path('contact/', views.contact, name="Contact")
 ]
 
+
+
+
+
+
+
+
+
+

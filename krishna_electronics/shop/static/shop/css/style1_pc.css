@@ -44,6 +44,11 @@ body
 {
     display: none;
 }
+#about_us
+{
+    display : block;
+    padding: 10px;
+}
 
 .side_nav
 {
@@ -199,7 +204,10 @@ body
     
     .dropdown {
       display: block;
+/*
       background-color: #4CAF50;
+*/
+      background-color : rgb(71, 73, 73);
       align-items: center;
       cursor: pointer;
     }
@@ -231,7 +239,8 @@ body
     }
     
     .dropdown:hover{
-      background-color: #3e8e41;
+      transition: 0.2s;
+      background-color: rgb(125, 129, 129);
     }
 
 

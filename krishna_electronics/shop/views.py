@@ -8,7 +8,27 @@ from django.core.mail import send_mail
 
 # Create your views here.
 def index(request):
+    if request.method=="POST":
+        name = request.POST.get('name', '')
+        phone = request.POST.get('phone', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+        contact = Contact(name=name, phone=phone, email=email, message=message)
+        contact.save()
 
+        data = {
+            'name' : name,
+            'phone' : phone,
+            'email' : email,
+            'message' : message
+        }
+        message = '''
+        Name : {}
+        Phone : {}
+        Email : {}
+        Message : {}
+        '''.format(data['name'], data['phone'], data['email'], data['message'])
+        send_mail('Contact us website message', message, '', ['krishnaelectronicsweb@gmail.com'])
     all_products = Product.objects.all();
     category_list = []
     for i in all_products:
@@ -50,6 +70,7 @@ def viewall(request, my_category):
     return render(request, 'shop/viewall.html', params)
 
 
+
 def contact(request):
     if request.method=="POST":
         name = request.POST.get('name', '')
@@ -72,9 +93,14 @@ def contact(request):
         Message : {}
         '''.format(data['name'], data['phone'], data['email'], data['message'])
         send_mail('Contact us website message', message, '', ['krishnaelectronicsweb@gmail.com'])
-
-        print(data)
-    return render(request, 'shop/home.html')
+    all_products = Product.objects.all();
+    category_list = []
+    for i in all_products:
+        if (i.product_category not in category_list):
+            category_list.append(i.product_category)
+    category_list = sorted(category_list)
+    params = {'allprods': all_products, 'category_list': category_list}
+    return render(request, 'shop/home.html', params)
 
 
 

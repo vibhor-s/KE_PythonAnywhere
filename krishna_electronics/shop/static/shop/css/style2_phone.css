@@ -96,6 +96,12 @@ body
     display: block;
 }
 
+#about_us
+{
+    display : none;
+    padding: 0px;
+}
+
 .top_right_buttons
 {
     margin: auto;
@@ -108,7 +114,7 @@ body
 {
     color: white;
     text-decoration: none;
-    padding: 5px;
+    padding: 3px;
 }
 
 .top_right_buttons a:hover
