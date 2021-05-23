@@ -94,6 +94,7 @@ body
 #hamburger_icon
 {
     display: block;
+    padding: 3px;
 }
 
 #about_us
@@ -162,17 +163,7 @@ div.scrollmenu a
 }
 
 
-.slideshow-container {
-    padding-left: 10em;
-    padding-right: 10em;
-}
 
-
-.img_slides
-{
-    height: 100em;
-    width: 100%;
-}
 
 
 

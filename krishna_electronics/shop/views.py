@@ -71,37 +71,6 @@ def viewall(request, my_category):
 
 
 
-def contact(request):
-    if request.method=="POST":
-        name = request.POST.get('name', '')
-        phone = request.POST.get('phone', '')
-        email = request.POST.get('email', '')
-        message = request.POST.get('message', '')
-        contact = Contact(name=name, phone=phone, email=email, message=message)
-        contact.save()
-
-        data = {
-            'name' : name,
-            'phone' : phone,
-            'email' : email,
-            'message' : message
-        }
-        message = '''
-        Name : {}
-        Phone : {}
-        Email : {}
-        Message : {}
-        '''.format(data['name'], data['phone'], data['email'], data['message'])
-        send_mail('Contact us website message', message, '', ['krishnaelectronicsweb@gmail.com'])
-    all_products = Product.objects.all();
-    category_list = []
-    for i in all_products:
-        if (i.product_category not in category_list):
-            category_list.append(i.product_category)
-    category_list = sorted(category_list)
-    params = {'allprods': all_products, 'category_list': category_list}
-    return render(request, 'shop/home.html', params)
-
 
 
 

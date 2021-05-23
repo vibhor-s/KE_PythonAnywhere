@@ -25,6 +25,7 @@ body
     background-color: rgb(71, 73, 73);
     font-size: 10em;
     color: white;
+    font-family: 'Roboto Slab', serif;
 }
 
 
@@ -43,6 +44,7 @@ body
 #hamburger_icon
 {
     display: none;
+    padding: 0px;
 }
 #about_us
 {
@@ -299,15 +301,11 @@ div.navbar a:hover
 .mySlides {display: none;}
 
 
-.slideshow-container {
-    padding-left: 50em;
-    padding-right: 50em;
-    background-color: rgb(125, 129, 129);
-    max-width: 100%;
-    position: relative;
-  margin: auto;
+.img_slides
+{
+  width: 100%;
+  height: auto;
 }
-
 
 
 /* The dots/bullets/indicators */
@@ -324,13 +322,31 @@ div.navbar a:hover
 .active {
   background-color: #717171;
 }
-.img_slides
-{
-  width: 100%;
-  height: 500px;
-}
 
-/* Fading animation */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -338,15 +354,56 @@ div.navbar a:hover
   animation-duration: 1.5s;
 }
 
+/*
+
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
+
+
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
+
+*/
+
+
+
+
+.main_page_banners img
+{
+    width: 100%;
+    height: auto;
+    margin-top : 10px;
+    margin-bottom:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -404,14 +461,15 @@ div.scroll2 a
     width: 85vw;
     margin-left: 6vw;
     margin-right: 1vw;
-    margin-top: 150em;
+    margin-top: 15em;
+    margin-bottom: 15em;
 }
 
 div.scroll2 {
     padding: 10px;
     overflow: auto;
     white-space: nowrap;
-    margin-bottom: 20em;
+    margin-bottom: 5em;
 }
 
 .container {
@@ -515,6 +573,7 @@ product modal here
 
 .product_modal_content
 {
+    top: 0;
     display : flex;
     justify-content: center;
     flex-direction:column;
@@ -523,7 +582,6 @@ product modal here
     padding-bottom: 20px;
     margin: 2% auto;
     width: 90%;
-    height: 90%;
 }
 
 .product_modal_content_info

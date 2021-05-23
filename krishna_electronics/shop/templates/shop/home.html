@@ -2,49 +2,37 @@
 {% load static %}
 {% block title %} Krishna Electronics {% endblock %}
 {% block body %}
+
+
+
+
     <!-- Slideshow container -->
     <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/1.jpg">
+            <img class="img_slides" src="../static/shop/images/home_slide_show/1.jpg">
         </div>
         <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/2.jpg">
+            <img class="img_slides" src="../static/shop/images/home_slide_show/2.jpg">
         </div>
         <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/3.jpg">
+            <img class="img_slides" src="../static/shop/images/home_slide_show/3.jpg">
         </div>
         <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/4.jpg">
+            <img class="img_slides" src="../static/shop/images/home_slide_show/4.jpg">
         </div>
         <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/5.jpg">
+            <img class="img_slides" src="../static/shop/images/home_slide_show/5.jpg">
         </div>
         <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/6.jpg">
+            <img class="img_slides" src="../static/shop/images/home_slide_show/6.jpg">
         </div>
         <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/7.jpg">
+            <img class="img_slides" src="../static/shop/images/home_slide_show/7.jpg">
         </div>
-        <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/8.jpg">
-        </div>
-        <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/9.jpg">
-        </div>
-        <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/10.jpg">
-        </div>
-        <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/11.jpg">
-        </div>
-        <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/12.jpg">
-        </div>
-        <div class="mySlides fade">
-            <img class="img_slides" src="../static/shop/images/shop_pics/13.jpg">
-        </div>
+
+
     </div>
     <br>
 
@@ -71,15 +59,18 @@
 <!--allprods-->
 <!--category_list-->
 
+
+
+    <!--New Category-->
+
     <div class="products">
-        {% for cat in category_list %}
             <div class="category_viewall">
-                <h2>{{cat}}</h2>
-                <a href="/viewall/{{cat}}" class="viewall">VIEW ALL</a>
+                <h2>  LED TV   </h2>
+                <a href="/viewall/LED TV" class="viewall">VIEW ALL</a>
             </div>
             <div class="scroll2">
                 {% for i in allprods %}
-                {% if i.product_category == cat and  i.display_image  %}
+                {% if i.product_category == 'LED TV' and  i.display_image  %}
                 <a href="/products/{{i.product_id}}">-->
                     <div class="container">
                         <div class = "container_image">
@@ -93,11 +84,1058 @@
                 {% endif %}
                 {% endfor %}
             </div>
-        {% endfor %}
     </div>
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Air Conditioners  </h2>
+                <a href="/viewall/Air Conditioners" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Air Conditioners' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Washing Machines  </h2>
+                <a href="/viewall/Washing Machines" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Washing Machines' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Refrigerators  </h2>
+                <a href="/viewall/Refrigerators" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Refrigerators' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Ceiling Fans  </h2>
+                <a href="/viewall/Ceiling Fans" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Ceiling Fans' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Microwave Ovens  </h2>
+                <a href="/viewall/Microwave Ovens" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Microwave Ovens' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Desert Air Coolers  </h2>
+                <a href="/viewall/Desert Air Coolers" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Desert Air Coolers' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Chimneys  </h2>
+                <a href="/viewall/Chimneys" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Chimneys' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Deep Freezer  </h2>
+                <a href="/viewall/Deep Freezer" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Deep Freezer' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Induction Cooktops  </h2>
+                <a href="/viewall/Induction Cooktops" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Induction Cooktops' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Hair Dryers  </h2>
+                <a href="/viewall/Hair Dryers" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Hair Dryers' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Water Purifiers  </h2>
+                <a href="/viewall/Water Purifiers" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Water Purifiers' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Home Theatre  </h2>
+                <a href="/viewall/Home Theatre" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Home Theatre' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Trimmers  </h2>
+                <a href="/viewall/Trimmers" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Trimmers' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Inverters  </h2>
+                <a href="/viewall/Inverters" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Inverters' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Irons  </h2>
+                <a href="/viewall/Irons" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Irons' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Room Heaters  </h2>
+                <a href="/viewall/Room Heaters" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Room Heaters' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Stabilizers (AC, Mainline)  </h2>
+                <a href="/viewall/Stabilizers (AC, Mainline)" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Stabilizers (AC, Mainline)' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Water Heaters  </h2>
+                <a href="/viewall/Water Heaters" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Water Heaters' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Batteries  </h2>
+                <a href="/viewall/Batteries" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Batteries' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Electric Kettle  </h2>
+                <a href="/viewall/Electric Kettle" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Electric Kettle' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Sewing Machine  </h2>
+                <a href="/viewall/Sewing Machine" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Sewing Machine' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Electric Hand Blenders  </h2>
+                <a href="/viewall/Electric Hand Blenders" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Electric Hand Blenders' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Juicer Mixer Grinder  </h2>
+                <a href="/viewall/Juicer Mixer Grinder" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Juicer Mixer Grinder' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Gas Stoves  </h2>
+                <a href="/viewall/Gas Stoves" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Gas Stoves' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Toasters  </h2>
+                <a href="/viewall/Toasters" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Toasters' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Milk Madhani  </h2>
+                <a href="/viewall/Milk Madhani" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Milk Madhani' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Roti Maker  </h2>
+                <a href="/viewall/Roti Maker" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Roti Maker' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Coffee Maker  </h2>
+                <a href="/viewall/Coffee Maker" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Coffee Maker' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/12.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Automatic Sanitizer Dispenser  </h2>
+                <a href="/viewall/Automatic Sanitizer Dispenser" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Automatic Sanitizer Dispenser' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+    <!--New Category-->
+    <div class="main_page_banners">
+        <img src="../static/shop/images/home_page_banners/1.jpg">
+    </div>
+
+    <div class="products">
+            <div class="category_viewall">
+                <h2>  Water Coolers  </h2>
+                <a href="/viewall/Water Coolers" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == 'Water Coolers' and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">-->
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
 {% endblock %}
 
 
+
+<!--
+    <div class="products">
+        {% for cat in category_list %}
+            <div class="category_viewall">
+                <h2>{{cat}}</h2>
+                <a href="/viewall/{{cat}}" class="viewall">VIEW ALL</a>
+            </div>
+            <div class="scroll2">
+                {% for i in allprods %}
+                {% if i.product_category == cat and  i.display_image  %}
+                <a href="/products/{{i.product_id}}">&ndash;&gt;
+                    <div class="container">
+                        <div class = "container_image">
+                            <img src="/media/{{i.display_image}}" alt="">
+                        </div>
+                        <br>
+                        <p class="description"> {{ i.product_name }} </p>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>-->
 
