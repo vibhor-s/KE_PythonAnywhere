@@ -27,7 +27,18 @@ body
 
 
 
+#about_us_heading
+{
+    font-size: 25px;
+    margin:20px;
+}
 
+
+#about_us_para
+{
+    font-size: 10px;
+    margin:30px;
+}
 
 
 
