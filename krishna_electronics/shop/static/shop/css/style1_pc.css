@@ -377,8 +377,6 @@ div.navbar a:hover
 {
     width: 100%;
     height: auto;
-    margin-top : 10px;
-    margin-bottom:10px;
 }
 
 
@@ -512,6 +510,8 @@ div.scroll2 {
     font-family: 'Raleway', sans-serif;
     display: flex;
     margin-left: 2vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .viewall {
@@ -638,7 +638,18 @@ product modal here
 {
     margin-left: 100px;
     font-size: 30px;
+    color: #666;
+    font-family: 'KoHo', sans-serif;
+    margin-top: 0;
+
 }
+.viewall_page_product_category a
+{
+    text-decoration: none;
+    color: #666;
+    font-family: 'KoHo', sans-serif;
+}
+
 
 
 .viewall_page_boxes
