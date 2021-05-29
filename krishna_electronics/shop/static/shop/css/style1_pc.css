@@ -12,9 +12,12 @@ body
 }
 
 
+
+
+
 .top_row
 {
-    position:fixed;
+    position: sticky;
     overflow: hidden;
     top: 0;
     width: 100%;
@@ -27,14 +30,6 @@ body
     color: white;
     font-family: 'Roboto Slab', serif;
 }
-
-
-
-
-
-
-
-
 
 
 #sidemenu   
@@ -162,7 +157,21 @@ body
 }
 
 
-.heading_name
+
+.principal_pc
+{
+    display: block;
+}
+
+.principal_phone
+{
+    display: none;
+}
+
+
+
+
+.principal_pc
 {
     color: white;
     background-color: #ffffff;
@@ -170,7 +179,7 @@ body
     background: url('../images/background_image.jpg')no-repeat center center/cover;
     /* background-color: cadetblue; */
 }
-.heading_name h1
+.principal_pc h1
 {
     font-size: 4rem;
     margin: 0 15px;
@@ -178,12 +187,47 @@ body
     padding-bottom: 10px;
 }
 
-.heading_name h3
+.principal_pc h3
 {
     font-size: 1.5rem;
     margin: 0 15px;
     padding-bottom: 10px;
 }
+
+
+
+.principal_phone img
+{
+    width : 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .arrow
 {

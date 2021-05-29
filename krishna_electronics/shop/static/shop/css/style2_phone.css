@@ -135,13 +135,26 @@ body
 }
 
 
-.heading_name h1
+
+
+.principal_pc
+{
+    display: none;
+}
+
+.principal_phone
+{
+    display: block;
+}
+
+
+.principal_pc h1
 {
     padding-top: 80px;
     font-size: 2rem;
 }
 
-.heading_name h3
+.principal_pc h3
 {
     font-size: 0.7rem;
 }
